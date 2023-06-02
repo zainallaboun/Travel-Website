@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>
+    <style>
+        .parent {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+        .world map{
+          position: relative;
+          top: 0;
+          left: 0;
+          border: 1px solid #000000;
+        }
+        .mappin {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          border: 1px solid #000000;
+        }
+      </style>
+  </title>  
 </head>   
 
 <body>
-<p>
-    <img src="world map.png" height="400"width="800">
-    <img src="gpsicon.JPG">
-</p>
+<<div class="parent">
+    <img class="world map" src="world map.png" />
+    <img class="mappin" src="mappin.png" />
+  </div>
 </body>
 
 </html>
