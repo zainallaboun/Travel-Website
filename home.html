@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navbar.css">
 <head>
-  <title>
     <style>
-        .parent {
+        .container {
           position: relative;
-          top: 0;
-          left: 0;
+          width: 100%;
+          max-width: 400px;
         }
-        .world map{
-          position: relative;
-          top: 0;
-          left: 0;
-          border: 1px solid #000000;
-        }
-        .mappin {
+        
+        .container img {
+          width: 25%;
+          height: auto;
           position: absolute;
-          top: 30px;
-          left: 30px;
-          border: 1px solid #000000;
+          margin-right: auto;        
+          border: none;
+          cursor: pointer;
+        
+         
         }
-      </style>
-  </title>  
-</head>   
-
+        
+        
+    
+        </style>
+</head>
 <body>
-<<div class="parent">
-    <img class="world map" src="world map.png" />
-    <img class="mappin" src="mappin.png" />
-  </div>
+   <!---- <div class="container">
+    <img src="world map.png" alt="Snow" style="width:300%">
+    <class="img"><img src="mappin.png">
+     </div>
+    -->
+     <div class="navbar">
+      
+        <div class="subnav">
+          <button class="subnavbtn">Dresses <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="D&GDresses.html">D & G Dresses</a>
+            <a href="RCdresses.html">Roberto Cavalli Dresses</a>
+            <a href="VersaceDresses.html">Versace Dresses</a>
+          </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Tops <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="LuluTops.html">Lululemon Tops</a>
+            <a href="DiorTops.html">Dior Tops</a>
+            <a href="ChanelTops.html">Chanel Tops</a>
+          </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Bottoms <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="BrandyBottoms.html"> Brandy Melville Bottoms</a>
+            <a href="ChanelBottoms.html">Chanel Bottoms</a>
+            <a href="AritziaBottoms.html">Aritzia Bottoms</a>
+            </div>
+        </div>
+        <div class="subnav">
+           <button class="subnavbtn">Handbags <i class="fa fa-caret-down"></i></button>
+           <div class="subnav-content">
+             <a href="HermesBags.html">Hermes Bags</a>
+             <a href="PradaBags.html">Prada Bags</a>
+             <a href="LvBags.html">LV Bags</a>
+           </div>
+        </div>   
+    </div>
 </body>
 
 </html>
