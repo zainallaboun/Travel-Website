@@ -1,7 +1,8 @@
 /*Zain wrote this style sheet*/
 .container {
     width: 60%;
-    margin: 0 auto;
+    margin-left: 10%;
+    
   }
   path {fill: lightgray; stroke: white;}
   path:hover {fill: gray;} 
