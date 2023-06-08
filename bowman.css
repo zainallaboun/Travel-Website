@@ -1,6 +1,29 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: rgb(195, 202, 255);
+  }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
   }
+  
+h1 {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(65, 59, 160);
+}
+
+p {
+    text-align: center; 
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(65, 59, 160);
+}
+
+ul {
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(65, 59, 160); 
+}

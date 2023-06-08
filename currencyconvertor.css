@@ -3,10 +3,11 @@
 
 /* Set height of body and the document to 100% */
 body, html {
-background-color: #5c72d0;
+  background-color: rgb(195, 202, 255);
   height: 100%;
   margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(27, 27, 103) 
 }
 
 .left-adjustments {

@@ -63,6 +63,26 @@ body {
   .subnav:hover .subnav-content {
     display: block;
   }
+h3 {
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color: rgb(27, 27, 103)
+  
+}
+h2 {
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(27, 27, 103)
+}
+p {
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color: rgb(27, 27, 103) 
+}
 
+tr {
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color: rgb(27, 27, 103)  
+}
 
   /*Zain wrote this style sheet*/

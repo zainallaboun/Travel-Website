@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Average Cost Calculator</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Airplane_silhouette.svg/1200px-Airplane_silhouette.svg.png">
 </head>
+<!--Zain did all of this page-->
 <body>
-    
     <form  id="frm1" action="Calculate.html">
-    <table width="350px" border="1px">
-        <tr>
-            <th colspan="2">Availability</th>
-        </tr>      
-        <tr>
-            <td>hotel</td>
-            <td><input type="number" name="TotalProductionTime" placeholder=""> $ </td>
-        </tr>
-        <tr>
-            <td>Breaks</td>
-            <td><input type="number" name="Breaks" placeholder=""> minutes</td>
-        </tr>
-        <tr>
-            <td>Malfunctions</td>
-            <td><input type="number" name="Malfunctions" placeholder=""> minutes</td>
-        </tr>
-        <tr>
-            <td>Theoretical production time:</td>
-            <td><p id="test"></p></td>
-        </tr>
-    </table>
-  </form>
+        <table width="350px" border="1px">
+            <tr>
+                <th colspan="2">Trip Cost Calculator</th>
+            </tr>      
+            <tr>
+                <td>Hotel:</td>
+                <td><input type="number" name="Hotel" placeholder=""> $ </td>
+            </tr>
+            <tr>
+                <td>Transportation:</td>
+                <td><input type="number" name="Transportation" placeholder=""> $</td>
+            </tr>
+            <tr>
+                <td>Other Costs:</td>
+                <td><input type="number" name="Other Costs" placeholder=""> $</td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td><p id="test"></p></td>
+            </tr>
+        </table>
+      </form>
 <input type="button" onclick="Calculate()" name="Calculate" value="calculate">
 <script>
 function Calculate()
 {
-var Hotel = document.getElementById("Hotel").value;
-var TotalProductionTimeInMinutes = TotalProductionTime * 60;
-var Breaks = document.getElementById("Breaks").value;
-var Malfunctions = document.getElementById("Malfunctions").value;
-var Total = TotalProductionTimeInMinutes + Breaks +Malfunctions;      
+    var Hotel = document.getElementById("Hotel").value;
+    var Transportation = document.getElementById("Transportation").value;
+    var Other Costs = document.getElementById("Other Costs").value;
+    var Total Cost = Hotel + Transportation + Other Costs;      
 
-document.getElementById("test").innerHTML = Total;
+    document.getElementById("test").innerHTML = Total Cost;
 }
 </script>
 </body>
