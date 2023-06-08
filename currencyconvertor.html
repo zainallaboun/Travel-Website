@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter </title>
+    <link rel="stylesheet" href="currencyconvertor.css">
+    
+    <script>
+        function convertCurrency() {
+            var amount = parseFloat(document.getElementById("amount").value);
+            var fromCurrency = document.getElementById("fromCurrency").value;
+            var toCurrency = document.getElementById("toCurrency").value;
+            var convertedAmount = 0;
+
+            //When the amount is the same
+            if (fromCurrency === toCurrency) {
+                convertedAmount = amount;
+            } 
+
+            //Euro to all other currencies
+            else if (fromCurrency=="EUR" && toCurrency=="USD"){
+                var rate =1.07;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="EUR" && toCurrency=="CAD"){
+                var rate =1.44;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="EUR" && toCurrency=="CNY"){
+                var rate =7.60;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="EUR" && toCurrency=="GBP"){
+                var rate =0.86;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="EUR" && toCurrency=="AUD"){
+                var rate =1.62;
+                convertedAmount = amount * rate;
+            }
+            //USD to all other currencies
+            else if (fromCurrency=="USD" && toCurrency=="EUR"){
+                var rate =0.93;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="USD" && toCurrency=="CAD"){
+                var rate =1.34;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="USD" && toCurrency=="CNY"){
+                var rate =7.08;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="USD" && toCurrency=="GBP"){
+                var rate =0.8;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="USD" && toCurrency=="AUD"){
+                var rate =1.51;
+                convertedAmount = amount * rate;
+            }
+            //CAD to all other currencies
+            else if (fromCurrency=="CAD" && toCurrency=="EUR"){
+                var rate =0.69;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CAD" && toCurrency=="USD"){
+                var rate =0.74;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CAD" && toCurrency=="CNY"){
+                var rate =5.28;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CAD" && toCurrency=="GBP"){
+                var rate =0.60;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CAD" && toCurrency=="AUD"){
+                var rate =1.13;
+                convertedAmount = amount * rate;
+            }
+            //CNY to all other currencies
+            else if (fromCurrency=="CNY" && toCurrency=="EUR"){
+                var rate =0.13;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CNY" && toCurrency=="USD"){
+                var rate =0.14;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CNY" && toCurrency=="CAD"){
+                var rate =0.19;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CNY" && toCurrency=="GBP"){
+                var rate =0.11;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="CNY" && toCurrency=="AUD"){
+                var rate =0.21;
+                convertedAmount = amount * rate;
+            }
+            //GBP to all other currencies
+            else if (fromCurrency=="GBP" && toCurrency=="EUR"){
+                var rate =1.16;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="GBP" && toCurrency=="USD"){
+                var rate =1.25;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="GBP" && toCurrency=="CAD"){
+                var rate =1.67;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="GBP" && toCurrency=="CNY"){
+                var rate =1.89;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="GBP" && toCurrency=="AUD"){
+                var rate =8.82;
+                convertedAmount = amount * rate;
+            }
+            //AUD to all other currencies
+            else if (fromCurrency=="AUD" && toCurrency=="EUR"){
+                var rate =0.62;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="AUD" && toCurrency=="USD"){
+                var rate =0.66;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="AUD" && toCurrency=="CAD"){
+                var rate =0.89;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="AUD" && toCurrency=="CNY"){
+                var rate =0.53;
+                convertedAmount = amount * rate;
+            }
+            else if (fromCurrency=="AUD" && toCurrency=="GBP"){
+                var rate =4.69;
+                convertedAmount = amount * rate;
+            }
+             
+            document.getElementById("result").innerHTML = convertedAmount.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" placeholder="Enter amount">
+
+    <label for="fromCurrency">From:</label>
+    <select id="fromCurrency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="GBP">GBP</option>
+        <option value="AUD">AUD</option>
+    </select>
+
+    <label for="toCurrency">To:</label>
+    <select id="toCurrency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="GBP">GBP</option>
+        <option value="AUD">AUD</option>
+    </select>
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*Sima wrote this style sheet*/
+
+* {box-sizing: border-box}
+
+
+/* Set height of body and the document to 100% */
+body, html {
+    background-color: #66a18d;
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.left-adjustments {
+    margin-left:10px;
+}

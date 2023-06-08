@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="quiz.css">
+  <!--Sima did this page-->
+  <script>
+    // Quiz questions and answers
+    var quiz = [
+      {
+        question: "What is the capital of Germany?",
+        options: ["London", "Paris", "Rome", "Berlin"],
+        answer: 3
+      },
+      {
+        question: "What is the capital of China?",
+        options: ["Shang Hai", "Beijing", "Tokyo", "Hong Kong"],
+        answer: 1
+      },
+      {
+        question: "What is the capital of Canada?",
+        options: ["Ottawa", "Ontario", "Toronto", "New York"],
+        answer: 0
+      },
+      {
+        question: "What is the capital of Egypt?",
+        options: ["Jordan", "Cairo", "Yemen", "Alexandria"],
+        answer: 1
+      },
+      {
+        question: "What is the capital of Switzerland?",
+        options: ["Lech", "Zurich", "Geneva", "Bern"],
+        answer: 3
+      },
+      {
+        question: "What is the capital of Greece?",
+        options: ["Thenas", "Atnes", "Athens", "Athnes"],
+        answer: 2
+      },    
+      {
+        question: "What is the capital of Turkey?",
+        options: ["Izar", "Istanbul", "Ankara", "Bodrum"],
+        answer: 2
+      },    
+      {
+        question: "What is the capital of Italy?",
+        options: ["Bologna", "Rome", "Venice", "Vatican City"],
+        answer: 1
+      },   
+      {
+        question: "What is the capital of Australia?",
+        options: ["Canberra", "Sydney", "Melbourne", "New Zealand"],
+        answer: 0
+      },   
+      {
+        question: "Which is not a governerate in Jordan?",
+        options: ["Tafileh", "Zarke", "Karak", "Madaba"],
+        answer: 1
+      },    
+    ];
+
+    var currentQuestion = 0;
+    var score = 0;
+
+    function loadQuestion() {
+      var question = quiz[currentQuestion];
+      var questionElement = document.getElementById("question");
+      var optionsElement = document.getElementById("options");
+
+      questionElement.textContent = question.question;
+      optionsElement.innerHTML = "";
+
+      for (var i = 0; i < question.options.length; i++) {
+        var option = document.createElement("button");
+        option.textContent = question.options[i];
+        option.setAttribute("onclick", "checkAnswer(" + i + ")");
+        optionsElement.appendChild(option);
+      }
+    }
+
+    function checkAnswer(answer) {
+      var question = quiz[currentQuestion];
+
+      if (answer === question.answer) {
+        score++;
+      }
+
+      currentQuestion++;
+
+      if (currentQuestion < quiz.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      var quizContainer = document.getElementById("quiz-container");
+      quizContainer.innerHTML = "";
+
+      var result = document.createElement("h2");
+      result.textContent = "Quiz Completed! Your Score: " + score + " out of " + quiz.length;
+      quizContainer.appendChild(result);
+    }
+
+    window.onload = function() {
+      loadQuestion();
+    };
+  </script>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Quiz</h1>
+    <h3 id="question"></h3>
+    <div id="options"></div>
+  </div>
+</body>
+</html>

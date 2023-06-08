@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-<title> Travel Guide </title>
-<link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Airplane_silhouette.svg/1200px-Airplane_silhouette.svg.png">
+<head>
 </head>
-
-
-<form  id="frm1" action="Calculate.html">
+<body>
+    
+    <form  id="frm1" action="Calculate.html">
     <table width="350px" border="1px">
         <tr>
-            <th colspan="2">Average Cost Calculator</th>
+            <th colspan="2">Availability</th>
         </tr>      
         <tr>
-            <td>Hotel Cost</td>
-            <td><input type="number" name="Hotel Cost" placeholder="">$</td>
+            <td>hotel</td>
+            <td><input type="number" name="TotalProductionTime" placeholder=""> $ </td>
         </tr>
         <tr>
-            <td>Transportation Cost</td>
-            <td><input type="number" name="Transportation Cost" placeholder="">$</td>
+            <td>Breaks</td>
+            <td><input type="number" name="Breaks" placeholder=""> minutes</td>
         </tr>
         <tr>
-            <td>Other Expenses</td>
-            <td><input type="number" name="Other Expenses" placeholder="">$</td>
+            <td>Malfunctions</td>
+            <td><input type="number" name="Malfunctions" placeholder=""> minutes</td>
         </tr>
         <tr>
-            <td>Average Trip Cost:</td>
+            <td>Theoretical production time:</td>
             <td><p id="test"></p></td>
         </tr>
     </table>
@@ -42,3 +40,5 @@ var Total = TotalProductionTimeInMinutes + Breaks +Malfunctions;
 document.getElementById("test").innerHTML = Total;
 }
 </script>
+</body>
+</html>

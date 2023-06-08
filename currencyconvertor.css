@@ -1,0 +1,14 @@
+* {box-sizing: border-box}
+
+
+/* Set height of body and the document to 100% */
+body, html {
+background-color: #5c72d0;
+  height: 100%;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.left-adjustments {
+    margin-left:10px;
+}
