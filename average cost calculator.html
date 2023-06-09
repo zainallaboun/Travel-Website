@@ -7,26 +7,28 @@
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Airplane_silhouette.svg/1200px-Airplane_silhouette.svg.png">
 </head>
 <!--Zain did all of this page-->
+
 <body>
+    <h2>Cost Calculator</h2>
     <form  id="frm1" action="Calculate.html">
         <table width="350px" border="1px">
             <tr>
-                <th colspan="2">Trip Cost Calculator</th>
+                <th colspan="2">Cost Calculator</th>
             </tr>      
             <tr>
-                <td>Hotel:</td>
+                <td>Hotel</td>
                 <td><input type="number" name="Hotel" placeholder=""> $ </td>
             </tr>
             <tr>
-                <td>Transportation:</td>
+                <td>Flight</td>
+                <td><input type="number" name="Flight" placeholder=""> $</td>
+            </tr>
+            <tr>
+                <td>Transportation</td>
                 <td><input type="number" name="Transportation" placeholder=""> $</td>
             </tr>
             <tr>
-                <td>Other Costs:</td>
-                <td><input type="number" name="Other Costs" placeholder=""> $</td>
-            </tr>
-            <tr>
-                <td>Total Cost</td>
+                <td>Total Cost:</td>
                 <td><p id="test"></p></td>
             </tr>
         </table>
@@ -36,12 +38,12 @@
 function Calculate()
 {
     var Hotel = document.getElementById("Hotel").value;
+    var Hotel = Hotel * 60;
+    var Flight = document.getElementById("Flight").value;
     var Transportation = document.getElementById("Transportation").value;
-    var Other Costs = document.getElementById("Other Costs").value;
-    var Total Cost = Hotel + Transportation + Other Costs;      
+    var Total = Hotel + Flight + Transportation;      
 
-    document.getElementById("test").innerHTML = Total Cost;
+    document.getElementById("test").innerHTML = Total;
 }
 </script>
 </body>
-</html>
